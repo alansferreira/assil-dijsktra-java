@@ -1,10 +1,6 @@
 package assil.algorithms.dijkstra.tests;
 
-import static org.junit.Assert.fail;
-
-import java.util.ArrayList;
 import java.util.LinkedList;
-import java.util.List;
 
 import org.junit.Before;
 import org.junit.Test;
@@ -20,7 +16,9 @@ public class EngineTest {
 	
 	VertexMap<Vertex> vertexes = new VertexMap<Vertex>();
 	EdgeMap<Vertex, Edge<Vertex>> edges = new EdgeMap<Vertex, Edge<Vertex>>();
-
+	
+	
+	
 	@Before
 	public void setUp(){
 		vertexes.put(new Vertex("A"));
@@ -55,9 +53,5 @@ public class EngineTest {
 		
 	}
 
-	@Test
-	public void testGetPath() {
-		fail("Not yet implemented");
-	}
 
 }
