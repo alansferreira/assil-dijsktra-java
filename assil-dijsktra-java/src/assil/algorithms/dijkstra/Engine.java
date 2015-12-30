@@ -9,6 +9,14 @@ import java.util.List;
 import java.util.Map;
 import java.util.Set;
 
+/**
+ * c
+ * @author Alan da Silva Ferreira
+ * 
+ * Classe copiada e adaptada a partir do exemplo: 
+ * http://www.vogella.com/tutorials/JavaAlgorithmsDijkstra/article.html
+ * 
+ */
 public class Engine<V extends Vertex, E extends Edge<V>> {
 
 	private final EdgeMap<V, E> edges;
@@ -118,7 +126,7 @@ public class Engine<V extends Vertex, E extends Edge<V>> {
 		LinkedList<V> path = getPath(target);
 		List<E> ret = new ArrayList<E>();
 		
-		for (int i = 0; i < path.size() ; i+=2) {
+		for (int i = 0; i < path.size()-1 ; i++) {
 			ret.add((E) edges.find(path.get(i), path.get(i+1)));
 		}
 		

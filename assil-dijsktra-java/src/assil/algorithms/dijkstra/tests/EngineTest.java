@@ -13,6 +13,11 @@ import assil.algorithms.dijkstra.Engine;
 import assil.algorithms.dijkstra.Graph;
 import assil.algorithms.dijkstra.Vertex;
 import assil.algorithms.dijkstra.VertexMap;
+/**
+ * c
+ * @author Alan da Silva Ferreira
+ * 
+ */
 
 public class EngineTest {
 	
@@ -30,11 +35,11 @@ public class EngineTest {
 		vertexes.put(new Vertex("E"));
 
 		edges.put(new Edge<Vertex>("Edge_1", vertexes.get("A"), vertexes.get("B"), 10));
-		edges.put(new Edge<Vertex>("Edge_1", vertexes.get("B"), vertexes.get("D"), 15));
-		edges.put(new Edge<Vertex>("Edge_2", vertexes.get("A"), vertexes.get("C"), 20));
-		edges.put(new Edge<Vertex>("Edge_3", vertexes.get("C"), vertexes.get("D"), 30));
-		edges.put(new Edge<Vertex>("Edge_4", vertexes.get("B"), vertexes.get("E"), 10));
-		edges.put(new Edge<Vertex>("Edge_5", vertexes.get("D"), vertexes.get("E"), 65465465));
+		edges.put(new Edge<Vertex>("Edge_2", vertexes.get("B"), vertexes.get("D"), 15));
+		edges.put(new Edge<Vertex>("Edge_3", vertexes.get("A"), vertexes.get("C"), 20));
+		edges.put(new Edge<Vertex>("Edge_4", vertexes.get("C"), vertexes.get("D"), 30));
+		edges.put(new Edge<Vertex>("Edge_5", vertexes.get("B"), vertexes.get("E"), 15550));
+		edges.put(new Edge<Vertex>("Edge_6", vertexes.get("D"), vertexes.get("E"), 30));
 		
 	}
 	
@@ -59,7 +64,8 @@ public class EngineTest {
 	    for (int i = 0; i < edges.size(); i++) {
 			Edge<Vertex> edge = edges.get(i);
 
-			if(i%2!=0 || i==0 ) caminho.add(edge.getSource().getName());
+			if(i==0) caminho.add(edge.getSource().getName());
+			
 			caminho.add(edge.getDestination().getName());
 		}
 	    

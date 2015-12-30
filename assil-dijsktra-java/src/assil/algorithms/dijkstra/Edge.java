@@ -1,5 +1,13 @@
 package assil.algorithms.dijkstra;
-
+/**
+ * c
+ * @author Alan da Silva Ferreira 
+ * 
+ * Classe copiada e adaptada a partir do exemplo: 
+ * http://www.vogella.com/tutorials/JavaAlgorithmsDijkstra/article.html
+ * 
+ * @param <V>
+ */
 public class Edge<V extends Vertex> {
 	private final String id;
 	private final V source;

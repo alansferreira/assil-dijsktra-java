@@ -2,23 +2,29 @@ package de.vogella.algorithms.dijkstra.model;
 
 import java.util.List;
 
+/**
+ * 
+ * @author Alan da Silva Ferreira
+ * 
+ * Classe copiada exemplo: 
+ * http://www.vogella.com/tutorials/JavaAlgorithmsDijkstra/article.html
+ * 
+ */
 public class Graph {
-  private final List<Vertex> vertexes;
-  private final List<Edge> edges;
+	private final List<Vertex> vertexes;
+	private final List<Edge> edges;
 
-  public Graph(List<Vertex> vertexes, List<Edge> edges) {
-    this.vertexes = vertexes;
-    this.edges = edges;
-  }
+	public Graph(List<Vertex> vertexes, List<Edge> edges) {
+		this.vertexes = vertexes;
+		this.edges = edges;
+	}
 
-  public List<Vertex> getVertexes() {
-    return vertexes;
-  }
+	public List<Vertex> getVertexes() {
+		return vertexes;
+	}
 
-  public List<Edge> getEdges() {
-    return edges;
-  }
-  
-  
-  
-} 
+	public List<Edge> getEdges() {
+		return edges;
+	}
+
+}

@@ -3,6 +3,11 @@ package assil.algorithms.dijkstra;
 import java.util.List;
 import java.util.TreeMap;
 
+/**
+ * c
+ * @author Alan da Silva Ferreira
+ * 
+ */
 
 public class EdgeMap<V extends Vertex, E extends Edge<V>> extends TreeMap<String, E> {
 
