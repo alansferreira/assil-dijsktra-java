@@ -65,8 +65,9 @@ public class RotasResource {
 
 		mapa = new Graph<Vertex, Edge<Vertex>>(vertexes, edges);
 		mapas.put("mapa2", mapa);
-}
+	}
 	
+	//http://localhost:8080/rotas-web/rest/rotas/rota/mapa2/A/E/10/2.5
 	@GET
 	@Path("/rota/{mapa}/{origem}/{destino}/{autonomia}/{custolitro}")
 	@Produces(MediaType.APPLICATION_JSON)
