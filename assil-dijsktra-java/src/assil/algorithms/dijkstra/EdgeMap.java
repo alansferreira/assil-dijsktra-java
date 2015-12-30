@@ -17,7 +17,14 @@ public class EdgeMap<V extends Vertex, E extends Edge<V>> extends TreeMap<String
 	public Edge<V> put(E value) {
 		return super.put(value.getId(), value);
 	}
-	
+	public Edge<V> find(V source, V destination){
+		
+		for (Edge<V> edge : this.values()) {
+			if(edge.getSource().getName().equals(source.getName()) && edge.getDestination().getName().equals(destination.getName())) return edge;
+		}
+		
+		return null;
+	}
 	
 	
 }

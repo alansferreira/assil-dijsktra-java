@@ -20,7 +20,7 @@ public class Engine<V extends Vertex, E extends Edge<V>> {
 	public Engine(Graph<V, E> graph) {
 		this.edges = graph.getEdges();
 	}
-
+ 
 	public void execute(V source) {
 		settledNodes = new HashSet<V>();
 		unSettledNodes = new HashSet<V>();
@@ -113,5 +113,17 @@ public class Engine<V extends Vertex, E extends Edge<V>> {
 		Collections.reverse(path);
 		return path;
 	}
+
+	public List<E> getPathEdges(V target) {
+		LinkedList<V> path = getPath(target);
+		List<E> ret = new ArrayList<E>();
+		
+		for (int i = 0; i < path.size() ; i+=2) {
+			ret.add((E) edges.find(path.get(i), path.get(i+1)));
+		}
+		
+		return ret;
+	}
+
 
 }
