@@ -1,6 +1,8 @@
 package assil.algorithms.dijkstra.tests;
 
+import java.util.ArrayList;
 import java.util.LinkedList;
+import java.util.List;
 
 import org.junit.Before;
 import org.junit.Test;
@@ -29,10 +31,10 @@ public class EngineTest {
 
 		edges.put(new Edge<Vertex>("Edge_1", vertexes.get("A"), vertexes.get("B"), 10));
 		edges.put(new Edge<Vertex>("Edge_1", vertexes.get("B"), vertexes.get("D"), 15));
-		edges.put(new Edge<Vertex>("Edge_2", vertexes.get("A"), vertexes.get("C"), 10));
+		edges.put(new Edge<Vertex>("Edge_2", vertexes.get("A"), vertexes.get("C"), 20));
 		edges.put(new Edge<Vertex>("Edge_3", vertexes.get("C"), vertexes.get("D"), 30));
-		edges.put(new Edge<Vertex>("Edge_4", vertexes.get("B"), vertexes.get("E"), 50));
-		edges.put(new Edge<Vertex>("Edge_5", vertexes.get("D"), vertexes.get("E"), 130));
+		edges.put(new Edge<Vertex>("Edge_4", vertexes.get("B"), vertexes.get("E"), 10));
+		edges.put(new Edge<Vertex>("Edge_5", vertexes.get("D"), vertexes.get("E"), 65465465));
 		
 	}
 	
@@ -50,7 +52,21 @@ public class EngineTest {
 	    for (Vertex vertex : path) {
 	      System.out.println(vertex);
 	    }
-		
+
+	    List<Edge<Vertex>> edges = engine.getPathEdges(vertexes.get("E"));
+		List<String> caminho = new ArrayList<String>();
+
+	    for (int i = 0; i < edges.size(); i++) {
+			Edge<Vertex> edge = edges.get(i);
+
+			if(i%2!=0 || i==0 ) caminho.add(edge.getSource().getName());
+			caminho.add(edge.getDestination().getName());
+		}
+	    
+	    for (String c : caminho) {
+			System.out.println(c);
+		}
+	    
 	}
 
 

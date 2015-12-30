@@ -52,7 +52,7 @@ public class Engine<V extends Vertex, E extends Edge<V>> {
 
 	private int getDistance(V node, V target) {
 		for (Edge<V> edge : edges.values()) {
-			if (edge.getSource().equals(node) && edge.getDestination().equals(target)) {
+			if (edge.getSource().getName().equals(node.getName()) && edge.getDestination().getName().equals(target.getName())) {
 				return edge.getWeight();
 			}
 		}
@@ -62,7 +62,7 @@ public class Engine<V extends Vertex, E extends Edge<V>> {
 	private List<V> getNeighbors(V node) {
 		List<V> neighbors = new ArrayList<V>();
 		for (E edge : edges.values()) {
-			if (edge.getSource().equals(node) && !isSettled(edge.getDestination())) {
+			if (edge.getSource().getName().equals(node.getName()) && !isSettled(edge.getDestination())) {
 				neighbors.add(edge.getDestination());
 			}
 		}
