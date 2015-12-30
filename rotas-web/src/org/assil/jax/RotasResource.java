@@ -16,6 +16,11 @@ import assil.algorithms.dijkstra.Engine;
 import assil.algorithms.dijkstra.Graph;
 import assil.algorithms.dijkstra.Vertex;
 import assil.algorithms.dijkstra.VertexMap;
+/**
+ * c
+ * @author Alan da Silva Ferreira
+ * 
+ */
 
 @Path("/rotas")
 public class RotasResource {
@@ -40,8 +45,8 @@ public class RotasResource {
 		edges.put(new Edge<Vertex>("Edge_2", vertexes.get("B"), vertexes.get("D"), 15));
 		edges.put(new Edge<Vertex>("Edge_3", vertexes.get("A"), vertexes.get("C"), 10));
 		edges.put(new Edge<Vertex>("Edge_4", vertexes.get("C"), vertexes.get("D"), 30));
-		edges.put(new Edge<Vertex>("Edge_5", vertexes.get("B"), vertexes.get("E"), 50));
-		edges.put(new Edge<Vertex>("Edge_6", vertexes.get("D"), vertexes.get("E"), 130));
+		edges.put(new Edge<Vertex>("Edge_5", vertexes.get("B"), vertexes.get("E"), 10));
+		edges.put(new Edge<Vertex>("Edge_6", vertexes.get("D"), vertexes.get("E"), 30));
 
 		mapa = new Graph<Vertex, Edge<Vertex>>(vertexes, edges);
 		mapas.put("mapa1", mapa);
@@ -60,13 +65,14 @@ public class RotasResource {
 		edges.put(new Edge<Vertex>("Edge_2", vertexes.get("B"), vertexes.get("D"), 15));
 		edges.put(new Edge<Vertex>("Edge_3", vertexes.get("A"), vertexes.get("C"), 20));
 		edges.put(new Edge<Vertex>("Edge_4", vertexes.get("C"), vertexes.get("D"), 30));
-		edges.put(new Edge<Vertex>("Edge_5", vertexes.get("B"), vertexes.get("E"), 10));
+		edges.put(new Edge<Vertex>("Edge_5", vertexes.get("B"), vertexes.get("E"), 100));
 		edges.put(new Edge<Vertex>("Edge_6", vertexes.get("D"), vertexes.get("E"), 30));
 
 		mapa = new Graph<Vertex, Edge<Vertex>>(vertexes, edges);
 		mapas.put("mapa2", mapa);
 	}
-	
+
+	//http://localhost:8080/rotas-web/rest/rotas/rota/mapa1/A/E/10/2.5
 	//http://localhost:8080/rotas-web/rest/rotas/rota/mapa2/A/E/10/2.5
 	@GET
 	@Path("/rota/{mapa}/{origem}/{destino}/{autonomia}/{custolitro}")
