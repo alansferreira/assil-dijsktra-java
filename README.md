@@ -3,6 +3,6 @@ reimplementação do algoritimo de dijkstra
 
 
 # Ferramentas utilizadas
-Eclipse Luna e 
+Eclipse Luna
 
 JBOSS Wildfly 8.2
