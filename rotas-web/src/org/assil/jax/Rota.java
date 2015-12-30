@@ -26,13 +26,16 @@ public class Rota {
 	}
 	private List<String> caminho = new ArrayList<String>();
 	public Rota(List<Edge<Vertex>> path, double autonomia, double custolitro) {
+		double distanciaTotal = 0;
+		
 		for (int i = 0; i < path.size(); i++) {
 			Edge<Vertex> edge = path.get(i);
-			
-			this.custoTotal += ((edge.getWeight()*custolitro)/autonomia);
+			distanciaTotal += edge.getWeight();			
 			if(i%2!=0 || i==0 ) caminho.add(edge.getSource().getName());
 			caminho.add(edge.getDestination().getName());
 		}
+
+		this.custoTotal += ((distanciaTotal/autonomia)*custolitro);
 		
 		
 	}

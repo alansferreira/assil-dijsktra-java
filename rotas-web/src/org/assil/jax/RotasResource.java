@@ -37,11 +37,11 @@ public class RotasResource {
 		vertexes.put(new Vertex("E"));
 
 		edges.put(new Edge<Vertex>("Edge_1", vertexes.get("A"), vertexes.get("B"), 10));
-		edges.put(new Edge<Vertex>("Edge_1", vertexes.get("B"), vertexes.get("D"), 15));
-		edges.put(new Edge<Vertex>("Edge_2", vertexes.get("A"), vertexes.get("C"), 10));
-		edges.put(new Edge<Vertex>("Edge_3", vertexes.get("C"), vertexes.get("D"), 30));
-		edges.put(new Edge<Vertex>("Edge_4", vertexes.get("B"), vertexes.get("E"), 50));
-		edges.put(new Edge<Vertex>("Edge_5", vertexes.get("D"), vertexes.get("E"), 130));
+		edges.put(new Edge<Vertex>("Edge_2", vertexes.get("B"), vertexes.get("D"), 15));
+		edges.put(new Edge<Vertex>("Edge_3", vertexes.get("A"), vertexes.get("C"), 10));
+		edges.put(new Edge<Vertex>("Edge_4", vertexes.get("C"), vertexes.get("D"), 30));
+		edges.put(new Edge<Vertex>("Edge_5", vertexes.get("B"), vertexes.get("E"), 50));
+		edges.put(new Edge<Vertex>("Edge_6", vertexes.get("D"), vertexes.get("E"), 130));
 
 		mapa = new Graph<Vertex, Edge<Vertex>>(vertexes, edges);
 		mapas.put("mapa1", mapa);
@@ -57,11 +57,11 @@ public class RotasResource {
 		vertexes.put(new Vertex("E"));
 
 		edges.put(new Edge<Vertex>("Edge_1", vertexes.get("A"), vertexes.get("B"), 10));
-		edges.put(new Edge<Vertex>("Edge_1", vertexes.get("B"), vertexes.get("D"), 15));
-		edges.put(new Edge<Vertex>("Edge_2", vertexes.get("A"), vertexes.get("C"), 20));
-		edges.put(new Edge<Vertex>("Edge_3", vertexes.get("C"), vertexes.get("D"), 30));
-		edges.put(new Edge<Vertex>("Edge_4", vertexes.get("B"), vertexes.get("E"), 50));
-		edges.put(new Edge<Vertex>("Edge_5", vertexes.get("D"), vertexes.get("E"), 30));
+		edges.put(new Edge<Vertex>("Edge_2", vertexes.get("B"), vertexes.get("D"), 15));
+		edges.put(new Edge<Vertex>("Edge_3", vertexes.get("A"), vertexes.get("C"), 20));
+		edges.put(new Edge<Vertex>("Edge_4", vertexes.get("C"), vertexes.get("D"), 30));
+		edges.put(new Edge<Vertex>("Edge_5", vertexes.get("B"), vertexes.get("E"), 10));
+		edges.put(new Edge<Vertex>("Edge_6", vertexes.get("D"), vertexes.get("E"), 30));
 
 		mapa = new Graph<Vertex, Edge<Vertex>>(vertexes, edges);
 		mapas.put("mapa2", mapa);
