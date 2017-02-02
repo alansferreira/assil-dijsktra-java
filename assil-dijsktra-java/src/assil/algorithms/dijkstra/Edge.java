@@ -5,7 +5,7 @@ package assil.algorithms.dijkstra;
  * 
  * Classe copiada e adaptada a partir do exemplo: 
  * http://www.vogella.com/tutorials/JavaAlgorithmsDijkstra/article.html
- * 
+ * push test
  * @param <V>
  */
 public class Edge<V extends Vertex> {
